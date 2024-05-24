@@ -1,0 +1,4 @@
+Data in question:
+* cardsdb.json
+* DINEngschrift.ttf
+* challenge_cards

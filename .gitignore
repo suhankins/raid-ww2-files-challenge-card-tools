@@ -1,0 +1,4 @@
+*.ttf
+writeTextOnCards/new_challenge_cards
+.vscode
+cardsdb.json

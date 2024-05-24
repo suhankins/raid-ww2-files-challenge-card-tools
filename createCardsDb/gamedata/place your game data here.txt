@@ -1,0 +1,3 @@
+Data in question:
+* inventory.json
+* challengecardstweakdata.lua
