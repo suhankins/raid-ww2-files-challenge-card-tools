@@ -1,20 +1,25 @@
 from PIL import Image, ImageDraw, ImageFont
 import json
 
+width = 358
+height = 512
+textColor = (255, 255, 255)
+
 with open('./gamedata/cardsdb.json') as rawJson:
     cards = json.load(rawJson)
     cardNameFont = ImageFont.truetype("./gamedata/DINEngschrift.ttf", 42)
     xpFont = ImageFont.truetype("./gamedata/DINEngschrift.ttf", 32)
-    textColor = (255, 255, 255)
 
     for card in cards:
         with Image.open("./gamedata/challenge_cards/" + card['texture'] + ".png").convert("RGBA") as image:
             # Removing empty pixels
             bbox = image.getbbox()
+            # Some cards have barely visible pixels on top which make bounding box bigger, offsetting text
+            # To prevent that, we shrink bounding box
+            if image.getpixel((width/2, 2))[3] > 0 and image.getpixel((width/2, 2))[3] < 150:
+                bbox = (bbox[0], bbox[1] + 3, bbox[2], bbox[3] - 3)
             image = image.crop(bbox)
             # resizing all cards to the same size
-            width = 358
-            height = 512
             image = image.resize((width, height))
 
             context = ImageDraw.Draw(image)
