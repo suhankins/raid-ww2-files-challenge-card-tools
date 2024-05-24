@@ -77,7 +77,7 @@ for (const rawLine of lua.split('\n')) {
         continue;
     }
     if (line.startsWith('card_category = ')) {
-        currentObject.type =
+        currentObject.category =
             categories.find((category) =>
                 line.toLocaleLowerCase().includes(category)
             ) ?? '';
