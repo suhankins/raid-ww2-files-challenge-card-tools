@@ -95,9 +95,6 @@ for (const rawLine of lua.split('\n')) {
         currentObject.bonusXpMultiplier = getNumberFromLine(line);
         continue;
     }
-    if (line.startsWith('def_id = ') && currentObject.defId === undefined) {
-        currentObject.defId = getNumberFromLine(line);
-    }
 }
 cardsDb = [...cardsDb, currentObject];
 
