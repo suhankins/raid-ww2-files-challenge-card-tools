@@ -13,18 +13,20 @@ with open('./gamedata/cardsdb.json') as rawJson:
             bbox = image.getbbox()
             image = image.crop(bbox)
             # resizing all cards to the same size
-            image = image.resize((344, 512))
+            width = 358
+            height = 512
+            image = image.resize((width, height))
 
             context = ImageDraw.Draw(image)
 
             # halloween cards already have title on them
             if card['rarity'] != 'halloween':
-                context.text((172, 457), card['name'].upper(), font=cardNameFont, fill=textColor, align='center', anchor='mt')
+                context.text((width/2, 457), card['name'].upper(), font=cardNameFont, fill=textColor, align='center', anchor='mt')
 
             if 'bonusXp' in card and card['bonusXp'] != 0:
-                context.text((172, 13), "+" + str(card['bonusXp']), font=xpFont, fill=textColor, align='center', anchor='mt')
+                context.text((width/2, 13), "+" + str(card['bonusXp']), font=xpFont, fill=textColor, align='center', anchor='mt')
 
             if 'bonusXpMultiplier' in card and card['bonusXpMultiplier'] != 0:
-                context.text((172, 13), 'x%.2f' % (card['bonusXpMultiplier'] + 1), font=xpFont, fill=textColor, align='center', anchor='mt')
+                context.text((width/2, 13), 'x%.2f' % (card['bonusXpMultiplier'] + 1), font=xpFont, fill=textColor, align='center', anchor='mt')
 
             image.save("./new_challenge_cards/" + card['texture'] + ".png")
