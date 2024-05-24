@@ -25,7 +25,7 @@ with open('./gamedata/cardsdb.json') as rawJson:
             context = ImageDraw.Draw(image)
 
             # halloween cards already have title on them
-            if card['rarity'] != 'halloween':
+            if not ('rarity' in card) or card['rarity'] != 'halloween':
                 context.text((width/2, 457), card['name'].upper(), font=cardNameFont, fill=textColor, align='center', anchor='mt')
 
             if 'bonusXp' in card and card['bonusXp'] != 0:
@@ -34,4 +34,4 @@ with open('./gamedata/cardsdb.json') as rawJson:
             if 'bonusXpMultiplier' in card and card['bonusXpMultiplier'] != 0:
                 context.text((width/2, 13), 'x%.2f' % (card['bonusXpMultiplier'] + 1), font=xpFont, fill=textColor, align='center', anchor='mt')
 
-            image.save("./new_challenge_cards/" + card['texture'] + ".png")
+            image.save("./new_challenge_cards/" + card['id'] + ".png")
