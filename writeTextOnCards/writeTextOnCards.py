@@ -1,5 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
 import json
+from pathlib import Path
 
 width = 358
 height = 512
@@ -33,5 +34,9 @@ with open('./gamedata/cardsdb.json') as rawJson:
 
             if 'bonusXpMultiplier' in card and card['bonusXpMultiplier'] != 0:
                 context.text((width/2, 13), 'x%.2f' % (card['bonusXpMultiplier'] + 1), font=xpFont, fill=textColor, align='center', anchor='mt')
+            
+            Path("./new_challenge_cards/").mkdir(parents=True, exist_ok=True)
 
-            image.save("./new_challenge_cards/" + card['id'] + ".png")
+            filename = card['id'] + ".png"
+            print("Saving " + filename)
+            image.save("./new_challenge_cards/" + filename)
