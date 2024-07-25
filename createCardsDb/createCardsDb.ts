@@ -18,12 +18,15 @@ function getNumberFromLine(line: string) {
 }
 
 /**
- * @example getNumberFromLine('texture = "cc_raid_common_on_the_scrounge_hud",') // "cc_raid_common_on_the_scrounge_hud"
+ * @example getStringFromLine('texture = "cc_raid_common_on_the_scrounge_hud",') // "cc_raid_common_on_the_scrounge_hud"
  */
 function getStringFromLine(line: string) {
     return line.split('"')[1];
 }
 
+/**
+ * @example getLocalizedStringFromLine('texture = "card_ra_on_the_scrounge_name_id",') // "On the Scrounge"
+ */
 function getLocalizedStringFromLine(line: string) {
     return strings[getStringFromLine(line)];
 }
@@ -99,6 +102,6 @@ for (const rawLine of lua.split('\n')) {
 cardsDb = [...cardsDb, currentObject];
 
 // Removing empty cards generated on accident
-cardsDb = cardsDb.filter((card) => card.defId !== undefined);
+cardsDb = cardsDb.filter((card) => card.name !== undefined);
 
 await Deno.writeTextFile('cardsdb.json', JSON.stringify(cardsDb));
