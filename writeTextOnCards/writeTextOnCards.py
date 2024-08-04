@@ -2,6 +2,9 @@ from PIL import Image, ImageDraw, ImageFont
 import json
 from pathlib import Path
 
+def getPath(textureName):
+    return "./gamedata/challenge_cards/" + textureName + ".png"
+
 width = 358
 height = 512
 textColor = (255, 255, 255)
@@ -12,7 +15,10 @@ with open('./gamedata/cardsdb.json') as rawJson:
     xpFont = ImageFont.truetype("./gamedata/DINEngschrift.ttf", 32)
 
     for card in cards:
-        with Image.open("./gamedata/challenge_cards/" + card['texture'] + ".png").convert("RGBA") as image:
+        if (not Path(getPath(card['texture'])).is_file()):
+            card['texture'] = "cc_debug_card_hud"
+
+        with Image.open(getPath(card['texture'])).convert("RGBA") as image:
             # Removing empty pixels
             bbox = image.getbbox()
             # Some cards have barely visible pixels on top which make bounding box bigger, offsetting text

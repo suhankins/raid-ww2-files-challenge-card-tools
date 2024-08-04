@@ -1,0 +1,14 @@
+<table
+	name="Dump cards"
+	author="Punished Bernadetta"
+	color="Color('bf204b')"
+	cannot_be_disabled="false"
+	early_init="false"
+>
+    <hooks>
+		<hook
+			source_file="lib/tweak_data/challengecardstweakdata"
+			file="challengecardstweakdata.lua"
+		/>
+    </hooks>
+</table>

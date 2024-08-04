@@ -14,7 +14,7 @@ Tools used to create challenge card assets and data for [raid-ww2-files](https:/
 This repo contains most of the game data already (except for font), but if you need to update it:
 
 #### createCardsDb
-* Latest [`challengecardstweakdata.lua`](https://github.com/steam-test1/Raid-WW2-Lua-Complete/blob/5e7bda7fefb4dc101672184be0c30dd59cd78055/lib/tweak_data/challengecardstweakdata.lua)
+* `dump.json`. Can be created by installing "dump cards" mod in this repo into the game, running the game, closing it, and finding JSON dump of all cards in the game as a JSON file.
 * `strings/inventory.strings` converted to `inventory.json`. Use DieselBundleViewer version that supports compressed bundle, with hashlist that has challenge card stringIDs, and support for 64 bit .string files. You can download all of that [here](https://drive.google.com/file/d/15zQBTOfEISvNiJVtsKr5H2xTCoCSaZge/view?usp=sharing)
 
 #### writeTextOnCards
