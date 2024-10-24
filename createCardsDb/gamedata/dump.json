@@ -1,1291 +1,1327 @@
 {
-    "ra_on_the_scrounge": {
-        "description": "card_ra_on_the_scrounge_desc_id",
-        "def_id": 20001,
+    "ra_trick_or_treat": {
+        "description": "card_trick_or_treat_desc_id",
+        "selected_sound": "halloween_challenge_card_chosen",
+        "card_type": "card_type_raid",
+        "def_id": 406,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 1.15,
+                "name": "effect_trick_or_treat",
                 "type": "positive_effect",
-                "name": "enemy_loot_drop_reward_increase"
+                "effect_class": "BuffEffectCandy",
+                "value": true
             },
             {
-                "value": 0.8,
+                "name": "pumkin_heads",
+                "type": "positive_effect",
+                "value": true
+            },
+            {
+                "name": "forced_crate_tier",
                 "type": "negative_effect",
-                "name": "player_all_ammo_capacity"
+                "value": 1
             }
         ],
+        "rarity": "loot_rarity_common",
+        "negative_description": { "desc_id": "effect_trick_or_treat_malus" },
+        "positive_description": {
+            "desc_id": "effect_trick_or_treat_positive",
+            "desc_params": { "AMOUNT_XP": "50%" }
+        },
+        "texture": "cc_trick_or_treat_hud",
+        "name": "card_trick_or_treat_name_id",
+        "bonus_xp_multiplier": 1.75,
+        "event": true,
+        "achievement_id": ""
+    },
+    "ra_on_the_scrounge": {
+        "description": "card_ra_on_the_scrounge_desc_id",
+        "card_type": "card_type_raid",
+        "def_id": 20001,
         "card_category": "card_category_challenge_card",
-        "name": "card_ra_on_the_scrounge_name_id",
+        "bonus_xp": 400,
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "20%" },
-            "desc_id": "effect_player_primary_and_secondary_ammo_capacity_lowered"
+            "desc_id": "effect_player_primary_and_secondary_ammo_capacity_lowered",
+            "desc_params": { "EFFECT_VALUE_1": "20%" }
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "15%" },
-            "desc_id": "effect_loot_drop_effect_increased"
+            "desc_id": "effect_loot_drop_effect_increased",
+            "desc_params": { "EFFECT_VALUE_1": "15%" }
         },
-        "bonus_xp": 400,
-        "texture": "cc_raid_common_on_the_scrounge_hud",
-        "rarity": "loot_rarity_common",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_on_the_scrounge_name_id",
+        "effects": [
+            {
+                "name": "enemy_loot_drop_reward_increase",
+                "type": "positive_effect",
+                "value": 1.15
+            },
+            {
+                "name": "player_all_ammo_capacity",
+                "type": "negative_effect",
+                "value": 0.8
+            }
+        ],
+        "rarity": "loot_rarity_common",
+        "texture": "cc_raid_common_on_the_scrounge_hud"
     },
     "ra_no_backups": {
         "description": "card_ra_no_backups_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 20002,
-        "effects": [
-            {
-                "value": 1.15,
-                "type": "positive_effect",
-                "name": "reload_speed"
-            },
-            {
-                "value": 0,
-                "type": "negative_effect",
-                "name": "player_secondary_ammo_capacity"
-            }
-        ],
         "card_category": "card_category_challenge_card",
-        "name": "card_ra_no_backups_name_id",
+        "bonus_xp": 350,
         "negative_description": {
             "desc_id": "effect_player_no_secondary_ammo"
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "15%" },
-            "desc_id": "effect_player_faster_reload"
+            "desc_id": "effect_player_faster_reload",
+            "desc_params": { "EFFECT_VALUE_1": "15%" }
         },
-        "bonus_xp": 350,
-        "texture": "cc_raid_common_no_backups_hud",
-        "rarity": "loot_rarity_common",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_no_backups_name_id",
+        "effects": [
+            {
+                "name": "reload_speed",
+                "type": "positive_effect",
+                "value": 1.15
+            },
+            {
+                "name": "player_secondary_ammo_capacity",
+                "type": "negative_effect",
+                "value": 0
+            }
+        ],
+        "rarity": "loot_rarity_common",
+        "texture": "cc_raid_common_no_backups_hud"
     },
     "ra_this_is_gonna_hurt": {
         "description": "card_ra_this_is_gonna_hurt_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 20003,
-        "effects": [
-            {
-                "value": 1.15,
-                "type": "positive_effect",
-                "name": "enemies_receive_damage"
-            },
-            {
-                "value": 15,
-                "type": "negative_effect",
-                "name": "set_bleedout_timer"
-            }
-        ],
         "card_category": "card_category_challenge_card",
-        "name": "card_ra_this_is_gonna_hurt_name_id",
+        "bonus_xp": 300,
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "15" },
-            "desc_id": "effect_set_bleedout_timer"
+            "desc_id": "effect_set_bleedout_timer",
+            "desc_params": { "EFFECT_VALUE_1": "15" }
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "15%" },
-            "desc_id": "effect_enemies_take_more_damage"
+            "desc_id": "effect_enemies_take_more_damage",
+            "desc_params": { "EFFECT_VALUE_1": "15%" }
         },
-        "bonus_xp": 300,
-        "texture": "cc_raid_common_this_is_gonna_hurt_hud",
-        "rarity": "loot_rarity_common",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_this_is_gonna_hurt_name_id",
+        "effects": [
+            {
+                "name": "enemies_receive_damage",
+                "type": "positive_effect",
+                "value": 1.15
+            },
+            {
+                "name": "set_bleedout_timer",
+                "type": "negative_effect",
+                "value": 15
+            }
+        ],
+        "rarity": "loot_rarity_common",
+        "texture": "cc_raid_common_this_is_gonna_hurt_hud"
     },
     "ra_not_in_the_face": {
         "description": "card_ra_not_in_the_face_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 20004,
-        "effects": [
-            {
-                "value": 1.1,
-                "type": "positive_effect",
-                "name": "player_critical_hit_chance"
-            },
-            {
-                "value": true,
-                "type": "negative_effect",
-                "name": "player_headshot_doesnt_do_damage"
-            }
-        ],
         "card_category": "card_category_challenge_card",
-        "name": "card_ra_not_in_the_face_name_id",
+        "bonus_xp": 450,
         "negative_description": {
             "desc_id": "effect_headshot_doesnt_do_damage"
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10%" },
-            "desc_id": "effect_critical_hit_chance_increase"
+            "desc_id": "effect_critical_hit_chance_increase",
+            "desc_params": { "EFFECT_VALUE_1": "10%" }
         },
-        "bonus_xp": 450,
-        "texture": "cc_raid_common_not_in_the_face_hud",
-        "rarity": "loot_rarity_common",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_not_in_the_face_name_id",
+        "effects": [
+            {
+                "name": "player_critical_hit_chance",
+                "type": "positive_effect",
+                "value": 1.1
+            },
+            {
+                "name": "player_headshot_doesnt_do_damage",
+                "type": "negative_effect",
+                "value": true
+            }
+        ],
+        "rarity": "loot_rarity_common",
+        "texture": "cc_raid_common_not_in_the_face_hud"
     },
     "ra_loaded_for_bear": {
         "description": "card_ra_loaded_for_bear_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 20005,
-        "effects": [
-            {
-                "value": 1.2,
-                "type": "positive_effect",
-                "name": "player_all_ammo_capacity"
-            },
-            {
-                "value": 0.85,
-                "type": "negative_effect",
-                "name": "effect_player_movement_speed"
-            }
-        ],
         "card_category": "card_category_challenge_card",
-        "name": "card_ra_loaded_for_bear_name_id",
+        "bonus_xp": 350,
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "15%" },
-            "desc_id": "effect_player_movement_speed_reduced"
+            "desc_id": "effect_player_movement_speed_reduced",
+            "desc_params": { "EFFECT_VALUE_1": "15%" }
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "20%" },
-            "desc_id": "effect_player_primary_and_secondary_ammo_capacity_increased"
+            "desc_id": "effect_player_primary_and_secondary_ammo_capacity_increased",
+            "desc_params": { "EFFECT_VALUE_1": "20%" }
         },
-        "bonus_xp": 350,
-        "texture": "cc_raid_common_loaded_for_bear_hud",
-        "rarity": "loot_rarity_common",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_loaded_for_bear_name_id",
+        "effects": [
+            {
+                "name": "player_all_ammo_capacity",
+                "type": "positive_effect",
+                "value": 1.2
+            },
+            {
+                "name": "effect_player_movement_speed",
+                "type": "negative_effect",
+                "value": 0.85
+            }
+        ],
+        "rarity": "loot_rarity_common",
+        "texture": "cc_raid_common_loaded_for_bear_hud"
     },
     "ra_total_carnage": {
         "description": "card_ra_total_carnage_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 20006,
-        "bonus_xp_multiplier": 1.75,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 1,
+                "name": "ammo_pickups_refill_grenades",
                 "type": "positive_effect",
-                "name": "ammo_pickups_refill_grenades"
+                "value": 1
             },
             {
-                "value": true,
+                "name": "enemies_vulnerable_only_to_explosion",
                 "type": "negative_effect",
-                "name": "enemies_vulnerable_only_to_explosion"
+                "value": true
             },
             {
-                "value": true,
+                "name": "enemies_vulnerable_only_to_melee",
                 "type": "negative_effect",
-                "name": "enemies_vulnerable_only_to_melee"
+                "value": true
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_ra_total_carnage_name_id",
         "negative_description": {
             "desc_id": "effect_enemies_vulnerable_only_to_explosion_and_melee"
         },
         "positive_description": {
             "desc_id": "effect_ammo_pickups_refill_grenades"
         },
-        "texture": "cc_raid_uncommon_total_carnage_hud",
-        "rarity": "loot_rarity_uncommon",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_total_carnage_name_id",
+        "bonus_xp_multiplier": 1.75,
+        "rarity": "loot_rarity_uncommon",
+        "texture": "cc_raid_uncommon_total_carnage_hud"
     },
     "ra_switch_hitter": {
         "description": "card_ra_switch_hitter_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 20007,
-        "bonus_xp_multiplier": 1.65,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 1,
+                "name": "shooting_secondary_weapon_refills_primary_ammo",
                 "type": "positive_effect",
-                "name": "shooting_secondary_weapon_refills_primary_ammo"
+                "value": 1
             },
             {
-                "value": true,
+                "name": "shooting_primary_weapon_consumes_both_ammos",
                 "type": "negative_effect",
-                "name": "shooting_primary_weapon_consumes_both_ammos"
+                "value": true
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_ra_switch_hitter_name_id",
         "negative_description": {
             "desc_id": "effect_shooting_your_primary_weapon_consumes_both_ammos"
         },
         "positive_description": {
             "desc_id": "effect_shooting_secondary_weapon_fills_primary_ammo"
         },
-        "texture": "cc_raid_uncommon_switch_hitter_hud",
-        "rarity": "loot_rarity_uncommon",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_switch_hitter_name_id",
+        "bonus_xp_multiplier": 1.65,
+        "rarity": "loot_rarity_uncommon",
+        "texture": "cc_raid_uncommon_switch_hitter_hud"
     },
     "ra_gunslingers": {
         "description": "card_ra_gunslingers_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 20008,
-        "bonus_xp_multiplier": 1.65,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 1.15,
+                "name": "player_pistol_damage",
                 "type": "positive_effect",
-                "name": "player_pistol_damage"
+                "value": 1.15
             },
             {
-                "value": 0,
+                "name": "player_primary_ammo_capacity",
                 "type": "negative_effect",
-                "name": "player_primary_ammo_capacity"
+                "value": 0
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_ra_gunslingers_name_id",
         "negative_description": { "desc_id": "effect_player_no_primary_ammo" },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "15%" },
-            "desc_id": "effect_pistol_damage_increased"
+            "desc_id": "effect_pistol_damage_increased",
+            "desc_params": { "EFFECT_VALUE_1": "15%" }
         },
-        "texture": "cc_raid_uncommon_gunslingers_hud",
-        "rarity": "loot_rarity_uncommon",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_gunslingers_name_id",
+        "bonus_xp_multiplier": 1.65,
+        "rarity": "loot_rarity_uncommon",
+        "texture": "cc_raid_uncommon_gunslingers_hud"
     },
     "ra_fresh_troops": {
         "description": "card_ra_fresh_troops_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 20009,
-        "bonus_xp_multiplier": 2.25,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 1.25,
+                "name": "enemy_loot_drop_chance",
                 "type": "positive_effect",
-                "name": "enemy_loot_drop_chance"
+                "value": 1.25
             },
-            { "value": 1.5, "type": "negative_effect", "name": "enemy_health" }
+            { "name": "enemy_health", "type": "negative_effect", "value": 1.5 }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_ra_fresh_troops_name_id",
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "50%" },
-            "desc_id": "effect_enemies_health_increased"
+            "desc_id": "effect_enemies_health_increased",
+            "desc_params": { "EFFECT_VALUE_1": "50%" }
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "25%" },
-            "desc_id": "effect_loot_drop_chance_increased"
+            "desc_id": "effect_loot_drop_chance_increased",
+            "desc_params": { "EFFECT_VALUE_1": "25%" }
         },
-        "texture": "cc_raid_uncommon_fresh_troops_hud",
-        "rarity": "loot_rarity_uncommon",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_fresh_troops_name_id",
+        "bonus_xp_multiplier": 2.25,
+        "rarity": "loot_rarity_uncommon",
+        "texture": "cc_raid_uncommon_fresh_troops_hud"
     },
     "ra_dont_you_die_on_me": {
         "description": "card_ra_dont_you_die_on_me_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 20010,
-        "bonus_xp_multiplier": 1.8,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 10,
+                "name": "modify_bleedout_timer",
                 "type": "positive_effect",
-                "name": "modify_bleedout_timer"
+                "value": 10
             },
             {
+                "name": "player_died",
                 "fail_message": "challenge_card_effect_failed_message_player_died",
-                "value": true,
                 "type": "negative_effect",
-                "name": "player_died"
+                "value": true
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_ra_dont_you_die_on_me_name_id",
         "negative_description": {
             "desc_id": "effect_players_cannot_die_during_raid"
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10" },
-            "desc_id": "effect_bleedout_timer_increased"
+            "desc_id": "effect_bleedout_timer_increased",
+            "desc_params": { "EFFECT_VALUE_1": "10" }
         },
-        "texture": "cc_raid_uncommon_dont_you_die_on_me_hud",
-        "rarity": "loot_rarity_uncommon",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_dont_you_die_on_me_name_id",
+        "bonus_xp_multiplier": 1.8,
+        "rarity": "loot_rarity_uncommon",
+        "texture": "cc_raid_uncommon_dont_you_die_on_me_hud"
     },
     "ra_no_second_chances": {
         "description": "card_ra_no_second_chances_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 20011,
-        "bonus_xp_multiplier": 2.2,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 1.1,
+                "name": "player_health",
                 "type": "positive_effect",
-                "name": "player_health"
+                "value": 1.1
             },
             {
+                "name": "player_bleedout",
                 "fail_message": "challenge_card_effect_failed_message_player_went_to_bleedout",
-                "value": true,
                 "type": "negative_effect",
-                "name": "player_bleedout"
+                "value": true
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_ra_no_second_chances_name_id",
         "negative_description": {
             "desc_id": "effect_players_cannot_bleedout_during_raid"
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10" },
-            "desc_id": "effect_player_health_increased"
+            "desc_id": "effect_player_health_increased",
+            "desc_params": { "EFFECT_VALUE_1": "10" }
         },
-        "texture": "cc_raid_rare_no_second_chances_hud",
-        "rarity": "loot_rarity_rare",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_no_second_chances_name_id",
+        "bonus_xp_multiplier": 2.2,
+        "rarity": "loot_rarity_rare",
+        "texture": "cc_raid_rare_no_second_chances_hud"
     },
     "ra_a_perfect_score": {
         "description": "card_ra_a_perfect_score_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 20012,
-        "bonus_xp_multiplier": 2.2,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 2,
+                "name": "forced_crate_tier",
                 "type": "positive_effect",
-                "name": "forced_crate_tier"
+                "value": 2
             },
             {
+                "name": "player_failed_interaction_mini_game",
                 "fail_message": "challenge_card_effect_failed_message_player_failed_interaction_mini_game",
-                "value": true,
                 "type": "negative_effect",
-                "name": "player_failed_interaction_mini_game"
+                "value": true
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_ra_a_perfect_score_name_id",
         "negative_description": {
             "desc_id": "effect_players_cant_fail_minigame"
         },
         "positive_description": { "desc_id": "effect_all_chests_are_locked" },
-        "texture": "cc_raid_rare_a_perfect_score_hud",
-        "rarity": "loot_rarity_rare",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_a_perfect_score_name_id",
+        "bonus_xp_multiplier": 2.2,
+        "rarity": "loot_rarity_rare",
+        "texture": "cc_raid_rare_a_perfect_score_hud"
     },
     "ra_helmet_shortage": {
         "description": "card_ra_helmet_shortage_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 20013,
-        "bonus_xp_multiplier": 2.5,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": true,
+                "name": "player_headshot_auto_kill",
                 "type": "positive_effect",
-                "name": "player_headshot_auto_kill"
+                "value": true
             },
-            { "value": 0.5, "type": "negative_effect", "name": "player_health" }
+            { "name": "player_health", "type": "negative_effect", "value": 0.5 }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_ra_helmet_shortage_name_id",
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "50%" },
-            "desc_id": "effect_player_health_reduced"
+            "desc_id": "effect_player_health_reduced",
+            "desc_params": { "EFFECT_VALUE_1": "50%" }
         },
         "positive_description": {
             "desc_id": "effect_headshots_are_instakills"
         },
-        "texture": "cc_raid_rare_helmet_shortage_hud",
-        "rarity": "loot_rarity_rare",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_helmet_shortage_name_id",
+        "bonus_xp_multiplier": 2.5,
+        "rarity": "loot_rarity_rare",
+        "texture": "cc_raid_rare_helmet_shortage_hud"
     },
     "ra_hemorrhaging": {
         "description": "card_ra_hemorrhaging_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 20014,
-        "bonus_xp_multiplier": 2.5,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 0.1,
+                "name": "player_melee_kill_regenerates_health",
                 "type": "positive_effect",
-                "name": "player_melee_kill_regenerates_health"
+                "value": 0.1
             },
             {
-                "value": -0.00333,
+                "name": "player_health_regen",
                 "type": "negative_effect",
-                "name": "player_health_regen"
+                "value": -0.00333
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_ra_hemorrhaging_name_id",
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "20%" },
-            "desc_id": "effect_health_drain_per_minute"
+            "desc_id": "effect_health_drain_per_minute",
+            "desc_params": { "EFFECT_VALUE_1": "20%" }
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10%" },
-            "desc_id": "effect_melee_kills_regenerate_health"
+            "desc_id": "effect_melee_kills_regenerate_health",
+            "desc_params": { "EFFECT_VALUE_1": "10%" }
         },
-        "texture": "cc_raid_rare_hemorrhaging_hud",
-        "rarity": "loot_rarity_rare",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_hemorrhaging_name_id",
+        "bonus_xp_multiplier": 2.5,
+        "rarity": "loot_rarity_rare",
+        "texture": "cc_raid_rare_hemorrhaging_hud"
     },
     "ra_crab_people": {
         "description": "card_ra_crab_people_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 20015,
-        "bonus_xp_multiplier": 3,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 1.3,
+                "name": "effect_player_movement_speed",
                 "type": "positive_effect",
-                "name": "effect_player_movement_speed"
+                "value": 1.3
             },
             {
-                "value": true,
+                "name": "player_can_move_only_back_and_side",
                 "type": "negative_effect",
-                "name": "player_can_move_only_back_and_side"
+                "value": true
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_ra_crab_people_name_id",
         "negative_description": {
             "desc_id": "effect_player_can_only_walk_backwards_or_sideways"
         },
         "positive_description": {
             "desc_id": "effect_player_movement_speed_increased"
         },
-        "texture": "cc_raid_rare_crab_people_hud",
-        "rarity": "loot_rarity_rare",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_crab_people_name_id",
+        "bonus_xp_multiplier": 3,
+        "rarity": "loot_rarity_rare",
+        "texture": "cc_raid_rare_crab_people_hud"
     },
     "op_limited_supplies": {
         "description": "card_op_limited_supplies_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30001,
-        "effects": [
-            {
-                "value": 1.15,
-                "type": "positive_effect",
-                "name": "enemy_loot_drop_reward_increase"
-            },
-            {
-                "value": 0.8,
-                "type": "negative_effect",
-                "name": "player_all_ammo_capacity"
-            }
-        ],
         "card_category": "card_category_challenge_card",
-        "name": "card_op_limited_supplies_name_id",
+        "bonus_xp": 1000,
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "20%" },
-            "desc_id": "effect_player_primary_and_secondary_ammo_capacity_lowered"
+            "desc_id": "effect_player_primary_and_secondary_ammo_capacity_lowered",
+            "desc_params": { "EFFECT_VALUE_1": "20%" }
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "15%" },
-            "desc_id": "effect_loot_drop_effect_increased"
+            "desc_id": "effect_loot_drop_effect_increased",
+            "desc_params": { "EFFECT_VALUE_1": "15%" }
         },
-        "bonus_xp": 1000,
-        "texture": "cc_operation_common_limited_supplies_hud",
-        "rarity": "loot_rarity_common",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_limited_supplies_name_id",
+        "effects": [
+            {
+                "name": "enemy_loot_drop_reward_increase",
+                "type": "positive_effect",
+                "value": 1.15
+            },
+            {
+                "name": "player_all_ammo_capacity",
+                "type": "negative_effect",
+                "value": 0.8
+            }
+        ],
+        "rarity": "loot_rarity_common",
+        "texture": "cc_operation_common_limited_supplies_hud"
     },
     "op_take_the_cannoli": {
         "description": "card_op_take_the_cannoli_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30002,
-        "effects": [
-            {
-                "value": true,
-                "type": "positive_effect",
-                "name": "bags_dont_slow_players_down"
-            },
-            {
-                "value": 0.85,
-                "type": "negative_effect",
-                "name": "enemy_loot_drop_chance"
-            }
-        ],
         "card_category": "card_category_challenge_card",
-        "name": "card_op_take_the_cannoli_name_id",
+        "bonus_xp": 1500,
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "15%" },
-            "desc_id": "effect_loot_drop_chance_decreased"
+            "desc_id": "effect_loot_drop_chance_decreased",
+            "desc_params": { "EFFECT_VALUE_1": "15%" }
         },
         "positive_description": {
             "desc_id": "effect_no_movement_penalty_for_carrying_heavy_objects"
         },
-        "bonus_xp": 1500,
-        "texture": "cc_operation_common_take_the_canonoli_hud",
-        "rarity": "loot_rarity_common",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_take_the_cannoli_name_id",
+        "effects": [
+            {
+                "name": "bags_dont_slow_players_down",
+                "type": "positive_effect",
+                "value": true
+            },
+            {
+                "name": "enemy_loot_drop_chance",
+                "type": "negative_effect",
+                "value": 0.85
+            }
+        ],
+        "rarity": "loot_rarity_common",
+        "texture": "cc_operation_common_take_the_canonoli_hud"
     },
     "op_everyones_a_tough_guy": {
         "description": "card_op_everyones_a_tough_guy_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30003,
-        "effects": [
-            {
-                "value": 5,
-                "type": "positive_effect",
-                "name": "modify_bleedout_timer"
-            },
-            { "value": 1.1, "type": "negative_effect", "name": "enemy_health" }
-        ],
         "card_category": "card_category_challenge_card",
-        "name": "card_op_everyones_a_tough_guy_name_id",
+        "bonus_xp": 1400,
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10%" },
-            "desc_id": "effect_enemies_health_increased"
+            "desc_id": "effect_enemies_health_increased",
+            "desc_params": { "EFFECT_VALUE_1": "10%" }
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "5" },
-            "desc_id": "effect_bleedout_timer_increased"
+            "desc_id": "effect_bleedout_timer_increased",
+            "desc_params": { "EFFECT_VALUE_1": "5" }
         },
-        "bonus_xp": 1400,
-        "texture": "cc_operation_common_everyones_a_tough_guy_hud",
-        "rarity": "loot_rarity_common",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_everyones_a_tough_guy_name_id",
+        "effects": [
+            {
+                "name": "modify_bleedout_timer",
+                "type": "positive_effect",
+                "value": 5
+            },
+            { "name": "enemy_health", "type": "negative_effect", "value": 1.1 }
+        ],
+        "rarity": "loot_rarity_common",
+        "texture": "cc_operation_common_everyones_a_tough_guy_hud"
     },
     "op_nichtsplosions": {
         "description": "card_op_nichtsplosions_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30004,
-        "effects": [
-            {
-                "value": 1.15,
-                "type": "positive_effect",
-                "name": "reload_speed"
-            },
-            {
-                "value": true,
-                "type": "negative_effect",
-                "name": "enemies_impervious_to_explosive_damage"
-            }
-        ],
         "card_category": "card_category_challenge_card",
-        "name": "card_op_nichtsplosions_name_id",
+        "bonus_xp": 1200,
         "negative_description": {
             "desc_id": "effect_enemies_impervious_to_explosive_damage"
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "15%" },
-            "desc_id": "effect_player_faster_reload"
+            "desc_id": "effect_player_faster_reload",
+            "desc_params": { "EFFECT_VALUE_1": "15%" }
         },
-        "bonus_xp": 1200,
-        "texture": "cc_operation_common_nichtsplosions_hud",
-        "rarity": "loot_rarity_common",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_nichtsplosions_name_id",
+        "effects": [
+            {
+                "name": "reload_speed",
+                "type": "positive_effect",
+                "value": 1.15
+            },
+            {
+                "name": "enemies_impervious_to_explosive_damage",
+                "type": "negative_effect",
+                "value": true
+            }
+        ],
+        "rarity": "loot_rarity_common",
+        "texture": "cc_operation_common_nichtsplosions_hud"
     },
     "op_war_weary": {
         "description": "card_op_war_weary_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30005,
-        "effects": [
-            {
-                "value": 1.1,
-                "type": "positive_effect",
-                "name": "enemies_receive_damage"
-            },
-            {
-                "value": 0.75,
-                "type": "negative_effect",
-                "name": "enemy_loot_drop_reward_increase"
-            }
-        ],
         "card_category": "card_category_challenge_card",
-        "name": "card_op_war_weary_name_id",
+        "bonus_xp": 800,
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "25%" },
-            "desc_id": "effect_loot_drop_effect_decreased"
+            "desc_id": "effect_loot_drop_effect_decreased",
+            "desc_params": { "EFFECT_VALUE_1": "25%" }
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10%" },
-            "desc_id": "effect_enemies_take_more_damage"
+            "desc_id": "effect_enemies_take_more_damage",
+            "desc_params": { "EFFECT_VALUE_1": "10%" }
         },
-        "bonus_xp": 800,
-        "texture": "cc_operation_common_war_weary_hud",
-        "rarity": "loot_rarity_common",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_war_weary_name_id",
+        "effects": [
+            {
+                "name": "enemies_receive_damage",
+                "type": "positive_effect",
+                "value": 1.1
+            },
+            {
+                "name": "enemy_loot_drop_reward_increase",
+                "type": "negative_effect",
+                "value": 0.75
+            }
+        ],
+        "rarity": "loot_rarity_common",
+        "texture": "cc_operation_common_war_weary_hud"
     },
     "op_special_for_a_reason": {
         "description": "card_op_special_for_a_reason_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30006,
-        "bonus_xp_multiplier": 1.3,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 1.1,
+                "name": "effect_player_movement_speed",
                 "type": "positive_effect",
-                "name": "effect_player_movement_speed"
+                "value": 1.1
             },
             {
-                "value": 1.5,
+                "name": "enemy_does_damage",
                 "type": "negative_effect",
-                "name": "enemy_does_damage"
+                "value": 1.5
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_op_special_for_a_reason_name_id",
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "50%" },
-            "desc_id": "effect_special_enemies_deal_increased_damage"
+            "desc_id": "effect_special_enemies_deal_increased_damage",
+            "desc_params": { "EFFECT_VALUE_1": "50%" }
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10%" },
-            "desc_id": "effect_player_movement_speed_increased"
+            "desc_id": "effect_player_movement_speed_increased",
+            "desc_params": { "EFFECT_VALUE_1": "10%" }
         },
-        "texture": "cc_operation_uncommon_special_for_a_reason_hud",
-        "rarity": "loot_rarity_uncommon",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_special_for_a_reason_name_id",
+        "bonus_xp_multiplier": 1.3,
+        "rarity": "loot_rarity_uncommon",
+        "texture": "cc_operation_uncommon_special_for_a_reason_hud"
     },
     "op_dont_blink": {
         "description": "card_op_dont_blink_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30007,
-        "bonus_xp_multiplier": 1.4,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 1.1,
+                "name": "enemy_loot_drop_chance",
                 "type": "positive_effect",
-                "name": "enemy_loot_drop_chance"
+                "value": 1.1
             },
             {
-                "value": 5,
+                "name": "enemy_loot_drop_despawn_health",
                 "type": "negative_effect",
-                "name": "enemy_loot_drop_despawn_health"
+                "value": 5
             },
             {
-                "value": 5,
+                "name": "enemy_loot_drop_despawn_ammo",
                 "type": "negative_effect",
-                "name": "enemy_loot_drop_despawn_ammo"
+                "value": 5
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_op_dont_blink_name_id",
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "5" },
-            "desc_id": "effect_loot_drop_pickups_desappear"
+            "desc_id": "effect_loot_drop_pickups_desappear",
+            "desc_params": { "EFFECT_VALUE_1": "5" }
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10%" },
-            "desc_id": "effect_loot_drop_chance_increased"
+            "desc_id": "effect_loot_drop_chance_increased",
+            "desc_params": { "EFFECT_VALUE_1": "10%" }
         },
-        "texture": "cc_operation_uncommon_dont_blink_hud",
-        "rarity": "loot_rarity_uncommon",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_dont_blink_name_id",
+        "bonus_xp_multiplier": 1.4,
+        "rarity": "loot_rarity_uncommon",
+        "texture": "cc_operation_uncommon_dont_blink_hud"
     },
     "op_bad_coffee": {
         "description": "card_op_bad_coffee_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30008,
-        "bonus_xp_multiplier": 1.6,
+        "card_category": "card_category_challenge_card",
         "effects": [
-            { "value": 1.1, "type": "positive_effect", "name": "reload_speed" },
+            { "name": "reload_speed", "type": "positive_effect", "value": 1.1 },
             {
-                "value": 15,
+                "name": "set_bleedout_timer",
                 "type": "negative_effect",
-                "name": "set_bleedout_timer"
+                "value": 15
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_op_bad_coffee_name_id",
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "15" },
-            "desc_id": "effect_set_bleedout_timer"
+            "desc_id": "effect_set_bleedout_timer",
+            "desc_params": { "EFFECT_VALUE_1": "15" }
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10%" },
-            "desc_id": "effect_player_faster_reload"
+            "desc_id": "effect_player_faster_reload",
+            "desc_params": { "EFFECT_VALUE_1": "10%" }
         },
-        "texture": "cc_operation_uncommon_bad_coffee_hud",
-        "rarity": "loot_rarity_uncommon",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_bad_coffee_name_id",
+        "bonus_xp_multiplier": 1.6,
+        "rarity": "loot_rarity_uncommon",
+        "texture": "cc_operation_uncommon_bad_coffee_hud"
     },
     "op_playing_for_keeps": {
         "description": "card_op_playing_for_keeps_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30009,
-        "bonus_xp_multiplier": 1.5,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 1.1,
+                "name": "enemies_receive_damage",
                 "type": "positive_effect",
-                "name": "enemies_receive_damage"
+                "value": 1.1
             },
             {
-                "value": 0.75,
+                "name": "player_health",
                 "type": "negative_effect",
-                "name": "player_health"
+                "value": 0.75
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_op_playing_for_keeps_name_id",
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "25" },
-            "desc_id": "effect_player_health_reduced"
+            "desc_id": "effect_player_health_reduced",
+            "desc_params": { "EFFECT_VALUE_1": "25" }
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10%" },
-            "desc_id": "effect_enemies_take_more_damage"
+            "desc_id": "effect_enemies_take_more_damage",
+            "desc_params": { "EFFECT_VALUE_1": "10%" }
         },
-        "texture": "cc_operation_uncommon_playing_for_keeps_hud",
-        "rarity": "loot_rarity_uncommon",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_playing_for_keeps_name_id",
+        "bonus_xp_multiplier": 1.5,
+        "rarity": "loot_rarity_uncommon",
+        "texture": "cc_operation_uncommon_playing_for_keeps_hud"
     },
     "op_silent_shout": {
         "description": "card_op_silent_shout_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30010,
-        "bonus_xp_multiplier": 1.55,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 0.1,
+                "name": "player_melee_kill_regenerates_health",
                 "type": "positive_effect",
-                "name": "player_melee_kill_regenerates_health"
+                "value": 0.1
             },
             {
+                "name": "players_cant_use_warcries",
                 "fail_message": "challenge_card_effect_failed_message_player_used_warcry",
-                "value": true,
                 "type": "negative_effect",
-                "name": "players_cant_use_warcries"
+                "value": true
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_op_silent_shout_name_id",
         "negative_description": { "desc_id": "effect_players_cant_use_warcry" },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10%" },
-            "desc_id": "effect_melee_kills_regenerate_health"
+            "desc_id": "effect_melee_kills_regenerate_health",
+            "desc_params": { "EFFECT_VALUE_1": "10%" }
         },
-        "texture": "cc_operation_uncommon_silent_shout_hud",
-        "rarity": "loot_rarity_uncommon",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_silent_shout_name_id",
+        "bonus_xp_multiplier": 1.55,
+        "rarity": "loot_rarity_uncommon",
+        "texture": "cc_operation_uncommon_silent_shout_hud"
     },
     "op_blow_me": {
         "description": "card_op_blow_me_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30011,
-        "bonus_xp_multiplier": 1.75,
+        "card_category": "card_category_challenge_card",
         "effects": [
-            { "value": 2, "type": "positive_effect", "name": "grenade_damage" },
+            { "name": "grenade_damage", "type": "positive_effect", "value": 2 },
             {
-                "value": 0.5,
+                "name": "player_all_ammo_capacity",
                 "type": "negative_effect",
-                "name": "player_all_ammo_capacity"
+                "value": 0.5
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_op_blow_me_name_id",
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "50%" },
-            "desc_id": "effect_player_primary_and_secondary_ammo_capacity_lowered"
+            "desc_id": "effect_player_primary_and_secondary_ammo_capacity_lowered",
+            "desc_params": { "EFFECT_VALUE_1": "50%" }
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "100%" },
-            "desc_id": "effect_player_grenade_damage_increased"
+            "desc_id": "effect_player_grenade_damage_increased",
+            "desc_params": { "EFFECT_VALUE_1": "100%" }
         },
-        "texture": "cc_operation_rare_blow_me_hud",
-        "rarity": "loot_rarity_rare",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_blow_me_name_id",
+        "bonus_xp_multiplier": 1.75,
+        "rarity": "loot_rarity_rare",
+        "texture": "cc_operation_rare_blow_me_hud"
     },
     "op_you_only_live_once": {
         "description": "card_op_you_only_live_once_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30012,
-        "bonus_xp_multiplier": 2,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 0.05,
+                "name": "player_kill_regenerates_health",
                 "type": "positive_effect",
-                "name": "player_kill_regenerates_health"
+                "value": 0.05
             },
             {
+                "name": "player_died",
                 "fail_message": "challenge_card_effect_failed_message_player_died",
-                "value": true,
                 "type": "negative_effect",
-                "name": "player_died"
+                "value": true
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_op_you_only_live_once_name_id",
         "negative_description": {
             "desc_id": "effect_players_cannot_die_during_operation"
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "5%" },
-            "desc_id": "effect_player_health_regenerates_on_every_kill"
+            "desc_id": "effect_player_health_regenerates_on_every_kill",
+            "desc_params": { "EFFECT_VALUE_1": "5%" }
         },
-        "texture": "cc_operation_rare_you_only_live_once_hud",
-        "rarity": "loot_rarity_rare",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_you_only_live_once_name_id",
+        "bonus_xp_multiplier": 2,
+        "rarity": "loot_rarity_rare",
+        "texture": "cc_operation_rare_you_only_live_once_hud"
     },
     "op_short_controlled_bursts": {
         "description": "card_op_short_controlled_bursts_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30013,
-        "bonus_xp_multiplier": 2,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 1.07,
+                "name": "player_critical_hit_chance",
                 "type": "positive_effect",
-                "name": "player_critical_hit_chance"
+                "value": 1.07
             },
             {
+                "name": "players_cant_empty_clips",
                 "fail_message": "challenge_card_effect_failed_message_player_emptied_a_clip",
-                "value": true,
                 "type": "negative_effect",
-                "name": "players_cant_empty_clips"
+                "value": true
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_op_short_controlled_bursts_name_id",
         "negative_description": {
             "desc_id": "effect_players_cant_empty_any_clips"
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "7%" },
-            "desc_id": "effect_critical_hit_chance_increase"
+            "desc_id": "effect_critical_hit_chance_increase",
+            "desc_params": { "EFFECT_VALUE_1": "7%" }
         },
-        "texture": "cc_operation_rare_short_controlled_bursts_hud",
-        "rarity": "loot_rarity_rare",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_short_controlled_bursts_name_id",
+        "bonus_xp_multiplier": 2,
+        "rarity": "loot_rarity_rare",
+        "texture": "cc_operation_rare_short_controlled_bursts_hud"
     },
     "op_elite_opponents": {
         "description": "card_op_elite_opponents_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30014,
-        "bonus_xp_multiplier": 2,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 1.25,
+                "name": "enemy_loot_drop_chance",
                 "type": "positive_effect",
-                "name": "enemy_loot_drop_chance"
+                "value": 1.25
             },
-            { "value": 1.5, "type": "negative_effect", "name": "enemy_health" }
+            { "name": "enemy_health", "type": "negative_effect", "value": 1.5 }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_op_elite_opponents_name_id",
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "50%" },
-            "desc_id": "effect_enemies_health_increased"
+            "desc_id": "effect_enemies_health_increased",
+            "desc_params": { "EFFECT_VALUE_1": "50%" }
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "25%" },
-            "desc_id": "effect_loot_drop_chance_increased"
+            "desc_id": "effect_loot_drop_chance_increased",
+            "desc_params": { "EFFECT_VALUE_1": "25%" }
         },
-        "texture": "cc_operation_rare_elite_opponents_hud",
-        "rarity": "loot_rarity_rare",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_elite_opponents_name_id",
+        "bonus_xp_multiplier": 2,
+        "rarity": "loot_rarity_rare",
+        "texture": "cc_operation_rare_elite_opponents_hud"
     },
     "op_and_headaches_for_all": {
         "description": "card_op_and_headaches_for_all_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 30015,
-        "bonus_xp_multiplier": 2.5,
+        "card_category": "card_category_challenge_card",
         "effects": [
             {
-                "value": 1.5,
+                "name": "player_headshot_damage",
                 "type": "positive_effect",
-                "name": "player_headshot_damage"
+                "value": 1.5
             },
             {
-                "value": true,
+                "name": "enemies_die_only_on_headshot",
                 "type": "negative_effect",
-                "name": "enemies_die_only_on_headshot"
+                "value": true
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_op_and_headaches_for_all_name_id",
         "negative_description": {
             "desc_id": "effect_enemies_vulnerable_only_to_headshots"
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "50%" },
-            "desc_id": "effect_headshots_damage_increased"
+            "desc_id": "effect_headshots_damage_increased",
+            "desc_params": { "EFFECT_VALUE_1": "50%" }
         },
-        "texture": "cc_operation_rare_headaches_for_all_hud",
-        "rarity": "loot_rarity_rare",
         "achievement_id": "",
-        "card_type": "card_type_operation"
+        "name": "card_op_and_headaches_for_all_name_id",
+        "bonus_xp_multiplier": 2.5,
+        "rarity": "loot_rarity_rare",
+        "texture": "cc_operation_rare_headaches_for_all_hud"
     },
     "ra_b_walk_it_off": {
         "description": "challenge_card_ra_b_walk_it_off_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 40002,
+        "card_category": "card_category_booster",
+        "positive_description": {
+            "desc_id": "effect_bleedout_timer_increased",
+            "desc_params": { "EFFECT_VALUE_1": "5" }
+        },
         "effects": [
             {
-                "value": 5,
+                "name": "modify_bleedout_timer",
                 "type": "positive_effect",
-                "name": "modify_bleedout_timer"
+                "value": 5
             }
         ],
-        "card_category": "card_category_booster",
         "name": "challenge_card_ra_b_walk_it_off_name_id",
-        "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "5" },
-            "desc_id": "effect_bleedout_timer_increased"
-        },
-        "achievement_id": "",
         "rarity": "loot_rarity_common",
         "texture": "cc_booster_raid_common_walk_it_of_hud",
-        "card_type": "card_type_raid"
+        "achievement_id": ""
     },
     "ra_b_in_fine_feather": {
         "description": "challenge_card_ra_b_in_fine_feather_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 40004,
-        "effects": [
-            { "value": 1.1, "type": "positive_effect", "name": "player_health" }
-        ],
         "card_category": "card_category_booster",
-        "name": "challenge_card_ra_b_in_fine_feather_name_id",
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10%" },
-            "desc_id": "effect_player_health_increased"
+            "desc_id": "effect_player_health_increased",
+            "desc_params": { "EFFECT_VALUE_1": "10%" }
         },
-        "achievement_id": "",
+        "effects": [
+            { "name": "player_health", "type": "positive_effect", "value": 1.1 }
+        ],
+        "name": "challenge_card_ra_b_in_fine_feather_name_id",
         "rarity": "loot_rarity_uncommon",
         "texture": "cc_booster_raid_uncommon_in_fine_feather_hud",
-        "card_type": "card_type_raid"
+        "achievement_id": ""
     },
     "ra_b_precision_fire": {
         "description": "challenge_card_ra_b_precision_fire_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 40005,
+        "card_category": "card_category_booster",
+        "positive_description": {
+            "desc_id": "effect_enemies_take_increased_damage",
+            "desc_params": { "EFFECT_VALUE_1": "10%" }
+        },
         "effects": [
             {
-                "value": 1.1,
+                "name": "enemies_receive_damage",
                 "type": "positive_effect",
-                "name": "enemies_receive_damage"
+                "value": 1.1
             }
         ],
-        "card_category": "card_category_booster",
         "name": "challenge_card_ra_b_precision_fire_name_id",
-        "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10%" },
-            "desc_id": "effect_enemies_take_increased_damage"
-        },
-        "achievement_id": "",
         "rarity": "loot_rarity_rare",
         "texture": "cc_booster_raid_rare_precision_shooting_hud",
-        "card_type": "card_type_raid"
+        "achievement_id": ""
     },
     "op_b_recycle_for_victory": {
         "description": "challenge_card_op_b_recycle_for_victory_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 50001,
+        "card_category": "card_category_booster",
+        "positive_description": {
+            "desc_id": "effect_loot_drop_effect_increased",
+            "desc_params": { "EFFECT_VALUE_1": "10%" }
+        },
         "effects": [
             {
-                "value": 1.1,
+                "name": "enemy_loot_drop_reward_increase",
                 "type": "positive_effect",
-                "name": "enemy_loot_drop_reward_increase"
+                "value": 1.1
             }
         ],
-        "card_category": "card_category_booster",
         "name": "challenge_card_op_b_recycle_for_victory_name_id",
-        "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10%" },
-            "desc_id": "effect_loot_drop_effect_increased"
-        },
-        "achievement_id": "",
         "rarity": "loot_rarity_common",
         "texture": "cc_booster_operation_common_recycle_for_victory_hud",
-        "card_type": "card_type_operation"
+        "achievement_id": ""
     },
     "op_b_will_not_go_quietly": {
         "description": "challenge_card_op_b_will_not_go_quietly_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 50003,
+        "card_category": "card_category_booster",
+        "positive_description": {
+            "desc_id": "effect_bleedout_timer_increased",
+            "desc_params": { "EFFECT_VALUE_1": "7.5" }
+        },
         "effects": [
             {
-                "value": 7.5,
+                "name": "modify_bleedout_timer",
                 "type": "positive_effect",
-                "name": "modify_bleedout_timer"
+                "value": 7.5
             }
         ],
-        "card_category": "card_category_booster",
         "name": "challenge_card_op_b_will_not_go_quietly_name_id",
-        "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "7.5" },
-            "desc_id": "effect_bleedout_timer_increased"
-        },
-        "achievement_id": "",
         "rarity": "loot_rarity_uncommon",
         "texture": "cc_booster_operation_uncommon_will_not_go_quietly_hud",
-        "card_type": "card_type_operation"
+        "achievement_id": ""
     },
     "op_b_on_top_form": {
         "description": "challenge_card_op_b_on_top_form_desc_id",
+        "card_type": "card_type_operation",
         "def_id": 50006,
+        "card_category": "card_category_booster",
+        "positive_description": {
+            "desc_id": "effect_player_health_increased",
+            "desc_params": { "EFFECT_VALUE_1": "15%" }
+        },
         "effects": [
             {
-                "value": 1.15,
+                "name": "player_health",
                 "type": "positive_effect",
-                "name": "player_health"
+                "value": 1.15
             }
         ],
-        "card_category": "card_category_booster",
         "name": "challenge_card_op_b_on_top_form_name_id",
-        "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "15%" },
-            "desc_id": "effect_player_health_increased"
-        },
-        "achievement_id": "",
         "rarity": "loot_rarity_rare",
         "texture": "cc_booster_operation_rare_on_top_form_hud",
-        "card_type": "card_type_operation"
+        "achievement_id": ""
     },
     "ra_slasher_movie": {
-        "loot_drop_group": "halloween_2017",
         "description": "card_ra_slasher_movie_desc_id",
-        "def_id": 20016,
         "selected_sound": "halloween_challenge_card_chosen",
-        "bonus_xp_multiplier": 2.75,
+        "card_type": "card_type_raid",
+        "title_in_texture": true,
+        "card_back": "card_back_halloween_2017",
+        "def_id": 20016,
+        "card_category": "card_category_challenge_card",
+        "loot_drop_group": "halloween_2017",
         "effects": [
             {
-                "value": 0.01666,
+                "name": "player_health_regen",
                 "type": "positive_effect",
-                "name": "player_health_regen"
+                "value": 0.01666
             },
             {
-                "value": 20,
+                "name": "players_melee_damage_increase",
                 "type": "positive_effect",
-                "name": "players_melee_damage_increase"
+                "value": 20
             },
             {
-                "value": true,
+                "name": "players_only_melee",
                 "type": "negative_effect",
-                "name": "players_only_melee"
+                "value": true
             },
             {
-                "value": true,
+                "name": "players_warcries_disabled",
                 "type": "negative_effect",
-                "name": "players_warcries_disabled"
+                "value": true
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_ra_slasher_movie_name_id",
-        "title_in_texture": true,
         "negative_description": {
             "desc_id": "effect_melee_avail_warcries_disabled"
         },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "100%" },
-            "desc_id": "effect_melee_damage_increased_health_regen"
+            "desc_id": "effect_melee_damage_increased_health_regen",
+            "desc_params": { "EFFECT_VALUE_1": "100%" }
         },
-        "card_back": "card_back_halloween_2017",
-        "texture": "cc_special_raid_slasher_movie_hud",
-        "rarity": "loot_rarity_halloween",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_slasher_movie_name_id",
+        "bonus_xp_multiplier": 2.75,
+        "rarity": "loot_rarity_halloween",
+        "texture": "cc_special_raid_slasher_movie_hud"
     },
     "ra_pumpkin_pie": {
-        "loot_drop_group": "halloween_2017",
         "description": "card_ra_pumpkin_pie_desc_id",
-        "def_id": 20017,
         "selected_sound": "halloween_challenge_card_chosen",
-        "bonus_xp_multiplier": 2.5,
+        "card_type": "card_type_raid",
+        "title_in_texture": true,
+        "card_back": "card_back_halloween_2017",
+        "def_id": 20017,
+        "card_category": "card_category_challenge_card",
+        "loot_drop_group": "halloween_2017",
         "effects": [
             {
-                "value": 3,
+                "name": "player_headshot_damage",
                 "type": "positive_effect",
-                "name": "player_headshot_damage"
+                "value": 3
             },
             {
-                "value": true,
+                "name": "pumkin_heads",
                 "type": "positive_effect",
-                "name": "pumkin_heads"
+                "value": true
             },
             {
-                "value": true,
+                "name": "attack_only_in_air",
                 "type": "negative_effect",
-                "name": "attack_only_in_air"
+                "value": true
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_ra_pumpkin_pie_name_id",
-        "title_in_texture": true,
         "negative_description": { "desc_id": "effect_only_attack_in_air" },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "100%" },
-            "desc_id": "effect_headshots_damage_increased"
+            "desc_id": "effect_headshots_damage_increased",
+            "desc_params": { "EFFECT_VALUE_1": "100%" }
         },
-        "card_back": "card_back_halloween_2017",
-        "texture": "cc_special_raid_pumpkin_pie_hud",
-        "rarity": "loot_rarity_halloween",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_pumpkin_pie_name_id",
+        "bonus_xp_multiplier": 2.5,
+        "rarity": "loot_rarity_halloween",
+        "texture": "cc_special_raid_pumpkin_pie_hud"
     },
     "ra_season_of_resurrection": {
-        "loot_drop_group": "halloween_2017",
         "description": "card_ra_season_of_resurrection_desc_id",
-        "def_id": 20018,
         "selected_sound": "halloween_challenge_card_chosen",
-        "bonus_xp_multiplier": 2.5,
+        "card_type": "card_type_raid",
+        "title_in_texture": true,
+        "card_back": "card_back_halloween_2017",
+        "def_id": 20018,
+        "card_category": "card_category_challenge_card",
+        "loot_drop_group": "halloween_2017",
         "effects": [
             {
-                "value": 4,
+                "name": "player_low_health_damage",
                 "type": "positive_effect",
-                "name": "player_low_health_damage"
+                "value": 4
             },
             {
-                "value": true,
+                "name": "no_bleedout_pumpkin_revive",
                 "type": "negative_effect",
-                "name": "no_bleedout_pumpkin_revive"
+                "value": true
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_ra_season_of_resurrection_name_id",
-        "title_in_texture": true,
         "negative_description": {
             "desc_id": "effect_no_bleedout_pumpkin_revive"
         },
         "positive_description": {
             "desc_id": "effect_player_low_health_damage"
         },
-        "card_back": "card_back_halloween_2017",
-        "texture": "cc_special_raid_season_of_resurrection_hud",
-        "rarity": "loot_rarity_halloween",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_season_of_resurrection_name_id",
+        "bonus_xp_multiplier": 2.5,
+        "rarity": "loot_rarity_halloween",
+        "texture": "cc_special_raid_season_of_resurrection_hud"
     },
     "ra_holiday_rush": {
         "description": "card_ra_holiday_rush_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 402,
-        "effects": [
-            {
-                "value": true,
-                "type": "positive_effect",
-                "name": "effect_player_carry_invert_speed"
-            },
-            {
-                "value": 4,
-                "type": "negative_effect",
-                "name": "effect_enemies_melee_damage_increase"
-            }
-        ],
         "card_category": "card_category_booster",
-        "name": "card_ra_holiday_rush_name_id",
         "negative_description": {
-            "desc_params": { "EFFECT_VALUE_1": "400%" },
-            "desc_id": "effect_enemies_melee_damage_increase"
+            "desc_id": "effect_enemies_melee_damage_increase",
+            "desc_params": { "EFFECT_VALUE_1": "1600%" }
         },
         "positive_description": {
             "desc_id": "effect_player_carry_invert_speed"
         },
-        "texture": "cc_debug_card_hud",
-        "rarity": "loot_rarity_uncommon",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_holiday_rush_name_id",
+        "effects": [
+            {
+                "name": "effect_player_carry_invert_speed",
+                "type": "positive_effect",
+                "value": true
+            },
+            {
+                "name": "effect_enemies_melee_damage_increase",
+                "type": "negative_effect",
+                "value": 16
+            }
+        ],
+        "rarity": "loot_rarity_uncommon",
+        "texture": "cc_debug_card_hud"
     },
     "ra_dooms_day": {
         "description": "card_ra_dooms_day_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 400,
-        "effects": [
-            {
-                "value": 1.5,
-                "type": "positive_effect",
-                "name": "effect_player_movement_speed"
-            },
-            {
-                "value": true,
-                "type": "negative_effect",
-                "name": "effect_player_dooms_day"
-            },
-            {
-                "value": true,
-                "type": "negative_effect",
-                "name": "effect_player_cannot_ads"
-            },
-            {
-                "value": true,
-                "type": "negative_effect",
-                "name": "effect_player_cannot_sprint"
-            }
-        ],
         "card_category": "card_category_challenge_card",
-        "name": "card_ra_dooms_day_name_id",
+        "bonus_xp": 400,
         "negative_description": { "desc_id": "effect_player_dooms_day" },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "50%" },
-            "desc_id": "effect_player_movement_speed"
+            "desc_id": "effect_player_movement_speed",
+            "desc_params": { "EFFECT_VALUE_1": "50%" }
         },
-        "texture": "cc_debug_card_hud",
+        "name": "card_ra_dooms_day_name_id",
+        "effects": [
+            {
+                "name": "effect_player_movement_speed",
+                "type": "positive_effect",
+                "value": 1.5
+            },
+            {
+                "name": "effect_player_dooms_day",
+                "type": "negative_effect",
+                "value": true
+            },
+            {
+                "name": "effect_player_cannot_ads",
+                "type": "negative_effect",
+                "value": true
+            },
+            {
+                "name": "effect_player_cannot_sprint",
+                "type": "negative_effect",
+                "value": true
+            }
+        ],
         "rarity": "loot_rarity_rare",
-        "bonus_xp": 400,
-        "card_type": "card_type_raid"
+        "texture": "cc_ra_dooms_day_hud"
     },
     "ra_roulette": {
         "description": "card_ra_roulette_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 401,
-        "bonus_xp_multiplier": 1.5,
+        "card_category": "card_category_challenge_card",
+        "negative_description": { "desc_id": "effect_player_roulette" },
         "effects": [
             {
-                "value": true,
+                "name": "effect_player_roulette",
                 "type": "negative_effect",
-                "name": "effect_player_roulette"
+                "value": true
             }
         ],
-        "card_category": "card_category_challenge_card",
-        "name": "card_ra_roulette_name_id",
-        "negative_description": { "desc_id": "effect_player_roulette" },
-        "texture": "cc_ra_roulette_hud",
-        "rarity": "loot_rarity_rare",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_ra_roulette_name_id",
+        "bonus_xp_multiplier": 1.5,
+        "rarity": "loot_rarity_rare",
+        "texture": "cc_ra_roulette_hud"
     },
     "free_crowbar": {
         "description": "card_free_crowbar_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 403,
+        "card_category": "card_category_booster",
+        "positive_description": { "desc_id": "effect_all_chests_are_tier3" },
         "effects": [
             {
-                "value": 3,
+                "name": "forced_crate_tier",
                 "type": "positive_effect",
-                "name": "forced_crate_tier"
+                "value": 3
             },
             {
-                "value": true,
+                "name": "effect_player_equip_crowbar",
                 "type": "positive_effect",
-                "name": "effect_player_equip_crowbar"
+                "value": true
             }
         ],
-        "card_category": "card_category_booster",
         "name": "card_free_crowbar_name_id",
-        "positive_description": { "desc_id": "effect_all_chests_are_tier3" },
-        "achievement_id": "",
+        "texture": "cc_free_crowbar_hud",
         "rarity": "loot_rarity_common",
-        "texture": "cc_debug_card_hud",
-        "card_type": "card_type_raid"
+        "achievement_id": ""
     },
     "lucky_day": {
         "description": "card_lucky_day_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 404,
+        "card_category": "card_category_booster",
+        "positive_description": {
+            "desc_id": "effect_lucky_day",
+            "desc_params": { "EFFECT_VALUE_1": "10%" }
+        },
         "effects": [
             {
-                "value": 1.1,
+                "name": "player_critical_hit_chance",
                 "type": "positive_effect",
-                "name": "player_critical_hit_chance"
+                "value": 1.1
             },
             {
-                "value": 1.1,
+                "name": "enemy_loot_drop_reward_increase",
                 "type": "positive_effect",
-                "name": "enemy_loot_drop_reward_increase"
+                "value": 1.1
             }
         ],
-        "card_category": "card_category_booster",
         "name": "card_lucky_day_name_id",
-        "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "10%" },
-            "desc_id": "effect_lucky_day"
-        },
-        "achievement_id": "",
-        "rarity": "loot_rarity_rare",
         "texture": "cc_lucky_day_hud",
-        "card_type": "card_type_raid"
+        "rarity": "loot_rarity_rare",
+        "achievement_id": ""
     },
     "ra_mag_roulette": {
         "description": "card_mag_roulette_desc_id",
+        "card_type": "card_type_raid",
         "def_id": 405,
-        "effects": [
-            { "value": 1.3, "type": "positive_effect", "name": "reload_speed" },
-            {
-                "value": true,
-                "type": "negative_effect",
-                "name": "effect_player_random_reload"
-            }
-        ],
         "card_category": "card_category_challenge_card",
-        "name": "card_mag_roulette_name_id",
         "negative_description": { "desc_id": "effect_player_random_reload" },
         "positive_description": {
-            "desc_params": { "EFFECT_VALUE_1": "30%" },
-            "desc_id": "effect_player_faster_reload"
+            "desc_id": "effect_player_faster_reload",
+            "desc_params": { "EFFECT_VALUE_1": "30%" }
         },
-        "texture": "cc_debug_card_hud",
-        "rarity": "loot_rarity_halloween",
         "achievement_id": "",
-        "card_type": "card_type_raid"
+        "name": "card_mag_roulette_name_id",
+        "effects": [
+            { "name": "reload_speed", "type": "positive_effect", "value": 1.3 },
+            {
+                "name": "effect_player_random_reload",
+                "type": "negative_effect",
+                "value": true
+            }
+        ],
+        "rarity": "loot_rarity_rare",
+        "texture": "cc_mag_roulette_hud"
     }
 }
